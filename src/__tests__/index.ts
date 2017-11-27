@@ -41,24 +41,6 @@ describe('createPost', () => {
       expect(dry).toBe(true);
     });
 
-    it('can customize dateFormat', async () => {
-      const { path } = await createPost('hello-world', {
-        dry: true,
-        dateFormat: 'YYYY'
-      });
-
-      expect(path).toMatch(/2017-hello-world/);
-    });
-
-    it('can customize date', async () => {
-      const { path } = await createPost('hello-world', {
-        dry: true,
-        date: new Date('10/08/1990')
-      });
-
-      expect(path).toMatch(/1990-10-08/);
-    });
-
     it('can customize root', async () => {
       const root = '__heh_not_a_real_path__/pages';
       const { path } = await createPost('hello-world', { dry: true, root });

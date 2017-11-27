@@ -2,13 +2,13 @@ import defaults from '../defaults';
 
 describe('defaults', () => {
   it('contains expected default keys', () => {
-    ['dateFormat', 'dry', 'root', 'useNewLine'].forEach(key =>
+    ['dry', 'root', 'useNewLine'].forEach(key =>
       expect(defaults[key]).toBeDefined()
     );
   });
 
-  it('defaults to src/pages for root', () => {
-    expect(defaults.root).toBe('src/pages');
+  it('defaults to src/pages/tests for root', () => {
+    expect(defaults.root).toBe('src/pages/tests/');
   });
 
   it('defaults to dry=false', () => {

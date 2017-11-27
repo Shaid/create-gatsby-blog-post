@@ -21,7 +21,7 @@ const normalize = options => {
 
 export const createPost = async (folder, opts = {}) => {
   if (!folder) {
-    Promise.reject(new Error('A post title is required'));
+    Promise.reject(new Error('A test title is required'));
   }
 
   const options = normalize(
@@ -33,10 +33,7 @@ export const createPost = async (folder, opts = {}) => {
 
   const date = new Date(options.date);
 
-  const folderName = [
-    formatDate(date, options.dateFormat),
-    options.folder
-  ].join('-');
+  const folderName = [options.folder].join('-');
 
   const template = post({
     capitalized,

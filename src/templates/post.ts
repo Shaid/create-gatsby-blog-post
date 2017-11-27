@@ -17,7 +17,7 @@ export default function post(options) {
   return [
     frontmatter(options),
     null,
-    'Your next, great blog post goes here',
+    'Congratulations on creating a new test! I hope you get amazing feedback.',
     null
   ].join('\n');
 }
