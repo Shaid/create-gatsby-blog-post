@@ -3,6 +3,6 @@ export default {
   dry: false,
   log: process.env.NODE_ENV !== 'test',
   root: 'src/pages/tests/',
-  tags: true,
+  tags: [],
   useNewLine: true
 };

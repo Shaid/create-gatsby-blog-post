@@ -6,7 +6,12 @@ const frontmatter = ({ date, folder, capitalized, tags }) => {
     `path: "/${folder}"`,
     `date: "${date.toJSON()}"`,
     `title: "${capitalized}"`,
-    tags && 'tags: []',
+    `blurb: "This new test will be amazing!"`,
+    `active: false`,
+    `public: false`,
+    `featured: false`,
+    `template: "test"`,
+    tags && 'tags: ["tests"]',
     DELIMITTER
   ]
     .filter(val => val && val.length > 0)
